@@ -6,72 +6,72 @@
 	</head>
 	<body>
 
-    <h1>Hackney AI house price prediction</h1>
+    <div class="main">
 
-    <form id="form">
+      <h1>Hackney AI house price prediction</h1>
 
-      <div class="input">
-        Total floor area:
-        <input type="number" name="totalFloorArea" value="100">
+      <form id="form">
+
+        <div class="input">
+          <label for="totalFloorArea">Total floor area</label>
+          <input id="totalFloorArea" type="number" name="totalFloorArea" value="100">
+        </div>
+
+        <div class="input">
+          <label for="numberOfHabitableRooms">Habitable rooms</label>
+          <input id="numberOfHabitableRooms" type="number" name="numberOfHabitableRooms" value="4">
+        </div>
+
+        <div class="input">
+          <label for="isNew">New build</label>
+          <input type="checkbox" name="isNew" id="isNew">
+        </div>
+
+        <div class="input">
+          <label for="isFreehold">Freehold</label>
+          <input type="checkbox" name="isFreehold" id="isFreehold">
+        </div>
+
+        <div class="input">
+          <label for="isFlatOrMaisonette">Flat (or maisonette)</label>
+          <input type="checkbox" name="isFlatOrMaisonette" id="isFlatOrMaisonette">
+        </div>
+
+        <div class="input">
+          <label for="houseType">House type</label>
+          <select name="houseType" id="houseType">
+            <option value="terraced">Terraced</option>
+            <option value="semi">Semi detached</option>
+            <option value="detached">Detached</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <label for="dateBuilt">Date built</label>
+          <select name="dateBuilt" id="dateBuilt">
+            <option value="pre1900">Pre 1900</option>
+            <option value="00To29">1900-1929</option>
+            <option value="30To49">1930-1949</option>
+            <option value="50To66">1950-1966</option>
+            <option value="67To75">1967-1975</option>
+            <option value="76To90">1976-1990</option>
+            <option value="90To02">1990-2002</option>
+            <option value="03OrAfter" selected>2003+</option>
+            <option value="builtUnknown">Unknown</option>
+          </select>
+        </div>
+
+        <button type="button" id="getEstimate">Get estimate</button>
+
+      </form>
+
+      <div id="result" class="result"></div>
+
+      <div id="loading" class="loading">
+        <div class="loading-inner">Getting prediction...</div>
       </div>
 
-      <div class="input">
-        Habitable rooms:
-        <input type="number" name="numberOfHabitableRooms" value="4">
-      </div>
-
-      <div class="input">
-        New build
-        <input type="checkbox" name="isNew">
-      </div>
-
-      <div class="input">
-        Freehold
-        <input type="checkbox" name="isFreehold">
-      </div>
-
-      <div class="input">
-        Flat or maisonette
-        <input type="checkbox" name="isFlatOrMaisonette">
-      </div>
-
-      <div class="input">
-        <div>House type</div>
-        <input type="radio" id="terraced" name="houseType" value="terraced" checked>
-        <label for="terraced">Terraced</label><br>
-        <input type="radio" id="semi" name="houseType" value="semi">
-        <label for="semi">Semi detached</label><br>
-        <input type="radio" id="detached" name="houseType" value="detached">
-        <label for="detached">Detached</label>
-      </div>
-
-      <div class="input">
-        <div>Date built</div>
-        <input type="radio" id="pre1900" name="dateBuilt" value="pre1900">
-        <label for="pre1900">Pre 1900</label><br>
-        <input type="radio" id="00To29" name="dateBuilt" value="00To29">
-        <label for="00To29">1900-1929</label><br>
-        <input type="radio" id="30To49" name="dateBuilt" value="30To49">
-        <label for="30To49">1930-1949</label><br>
-        <input type="radio" id="50To66" name="dateBuilt" value="50To66">
-        <label for="50To66">1950-1966</label><br>
-        <input type="radio" id="67To75" name="dateBuilt" value="67To75">
-        <label for="67To75">1967-1975</label><br>
-        <input type="radio" id="76To90" name="dateBuilt" value="76To90">
-        <label for="76To90">1976-1990</label><br>
-        <input type="radio" id="90To02" name="dateBuilt" value="90To02">
-        <label for="90To02">1990-2002</label><br>
-        <input type="radio" id="03OrAfter" name="dateBuilt" value="03OrAfter" checked>
-        <label for="03OrAfter">2003+</label><br>
-        <input type="radio" id="builtUnknown" name="dateBuilt" value="builtUnknown">
-        <label for="builtUnknown">Unknown</label><br>
-      </div>
-
-      <button type="button" id="getEstimate">Get estimate</button>
-
-    </form>
-
-    <h2 id="result"></h2>
+    </div>
 
     <script src="./index.js"></script>
 	</body>

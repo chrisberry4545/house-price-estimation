@@ -83,17 +83,26 @@
     return result.predictions[0][0];
   };
 
+  const setIsLoading = (isLoading) => {
+    document.getElementById("loading").style.display = isLoading ? "block" : "none";
+  };
+
+  const addCommasToNumber = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   const setResult = (result) => {
+    const formattedPrice = addCommasToNumber(Math.round(result));
     document.getElementById("result")
-      .innerHTML = `£${Math.round(result)}`;
+      .innerHTML = `Estimated price: £${formattedPrice}`;
   };
 
   const onFormSubmit = async () => {
     const form = getForm();
     const formData = getAiPredictorInputData(form);
-    console.log("form", formData);
+    setIsLoading(true);
     const prediction = await getPrediction(formData);
-    console.log("prediction", prediction);
+    setIsLoading(false);
     setResult(prediction);
   };
 
