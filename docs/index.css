@@ -9,7 +9,13 @@ body {
   justify-self: center;
   max-width: 530px;
   margin: auto;
-  padding: 60px 20px 20px;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .main {
+    padding-top: 60px;
+  }
 }
 
 h1 {
