@@ -8,7 +8,6 @@
     "isTerraced": [0],
     "isFlatOrMaisonette": [0],
     "totalFloorArea": [101],
-    "hasKnownHabitableRooms": [1],
     "numberOfHabitableRooms": [4],
     "builtPre1900": [1],
     "built00To29": [0],
@@ -18,6 +17,9 @@
     "built76To90": [0],
     "built90To02": [0],
     "built03orAfter": [0],
-    "builtUnknown": [0]
+    "builtUnknown": [0],
+    "hasFireplace": [1],
+    "isTopStoryFlat": [0],
+    "isCurrentlyARental": [0]
   }]
 }

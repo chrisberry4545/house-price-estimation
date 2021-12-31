@@ -29,6 +29,9 @@
     const isNew = formData.get("isNew");
     const isFreehold = formData.get("isFreehold");
     const isFlatOrMaisonette = formData.get("isFlatOrMaisonette");
+    const isTopFloorFlat = formData.get("isTopFloorFlat");
+    const hasFireplace = formData.get("hasFireplace");
+    const isCurrentlyARental = formData.get("isCurrentlyARental");
 
     const houseType = formData.get("houseType");
     const isTerraced = houseType === "terraced";
@@ -55,7 +58,6 @@
         isSemiDetached: getTrueFalseValue(isSemiDetached),
         isTerraced: getTrueFalseValue(isTerraced),
         isFlatOrMaisonette: getCheckboxValue(isFlatOrMaisonette),
-        hasKnownHabitableRooms: [1],
         numberOfHabitableRooms: getNumberValueFromForm(numberOfHabitableRooms),
         totalFloorArea: getNumberValueFromForm(totalFloorArea),
         builtPre1900: getTrueFalseValue(builtPre1900),
@@ -66,7 +68,10 @@
         built76To90: getTrueFalseValue(built76To90),
         built90To02: getTrueFalseValue(built90To02),
         built03OrAfter: getTrueFalseValue(built03OrAfter),
-        builtUnknown: getTrueFalseValue(builtUnknown)
+        builtUnknown: getTrueFalseValue(builtUnknown),
+        hasFireplace: getTrueFalseValue(hasFireplace),
+        isTopStoryFlat: getTrueFalseValue(isTopFloorFlat),
+        isCurrentlyARental: getTrueFalseValue(isCurrentlyARental)
       }]
     };
   };
