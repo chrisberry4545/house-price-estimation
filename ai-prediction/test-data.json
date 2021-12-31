@@ -1,7 +1,9 @@
 {
-  "instances": [{  
+  "instances": [{
+    "yearSold": [2021],
     "isNew": [0],
     "isFreehold": [1],
+    "isDetached": [0],
     "isSemiDetached": [1],
     "isTerraced": [0],
     "isFlatOrMaisonette": [0],

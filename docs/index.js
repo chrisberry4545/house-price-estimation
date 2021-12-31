@@ -33,6 +33,7 @@
     const houseType = formData.get("houseType");
     const isTerraced = houseType === "terraced";
     const isSemiDetached = houseType === "semi";
+    const isDetached = houseType === "detached";
 
     const dateBuilt = formData.get("dateBuilt");
     const builtPre1900 = dateBuilt === "pre1900";
@@ -47,8 +48,10 @@
 
     return {
       instances: [{
+        yearSold: [2021],
         isNew: getCheckboxValue(isNew),
         isFreehold: getCheckboxValue(isFreehold),
+        isDetached: getTrueFalseValue(isDetached),
         isSemiDetached: getTrueFalseValue(isSemiDetached),
         isTerraced: getTrueFalseValue(isTerraced),
         isFlatOrMaisonette: getCheckboxValue(isFlatOrMaisonette),
@@ -62,7 +65,7 @@
         built67To75: getTrueFalseValue(built67To75),
         built76To90: getTrueFalseValue(built76To90),
         built90To02: getTrueFalseValue(built90To02),
-        built03orAfter: getTrueFalseValue(built03OrAfter),
+        built03OrAfter: getTrueFalseValue(built03OrAfter),
         builtUnknown: getTrueFalseValue(builtUnknown)
       }]
     };
